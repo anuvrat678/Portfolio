@@ -32,7 +32,7 @@ export function Header() {
     <header className="fixed inset-x-0 top-[max(0.75rem,env(safe-area-inset-top))] z-40 px-3">
       <nav aria-label="Main" className="mx-auto flex max-w-4xl items-center justify-between rounded-full border border-line bg-bg/90 md:bg-bg/70 py-2 pl-3 pr-2 shadow-xl shadow-black/10 md:backdrop-blur-xl">
         <a href="#home" aria-label="Anuvrat Singh Rajpurohit, home" className="flex items-center gap-2">
-          <span className="grid size-10 place-items-center rounded-full bg-gradient-to-br from-accent to-accent2 font-display text-xl font-bold text-on-accent">A</span>
+          <span className="grid size-10 place-items-center rounded-full bg-gradient-to-br from-accent to-accent2 font-display text-xl font-bold text-on-accent">AS</span>
           <span className="hidden font-display font-bold lg:inline">Anuvrat</span>
         </a>
         <div className="hidden items-center md:flex">{NAV.map((n) => link(n))}</div>

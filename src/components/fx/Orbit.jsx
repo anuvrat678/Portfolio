@@ -25,7 +25,7 @@ export function Orbit() {
       <div className="absolute inset-[20%] rounded-full bg-[radial-gradient(circle,var(--accent),transparent_70%)] opacity-40" />
       <Ring items={RING2} cls="inset-0" dur="50s" />
       <Ring items={RING1} cls="inset-[22%]" dur="35s" rev />
-      <div className="absolute inset-[38%] grid place-items-center rounded-full bg-gradient-to-br from-accent to-accent2 font-display text-3xl font-bold text-on-accent shadow-2xl">AR</div>
+      <div className="absolute inset-[38%] grid place-items-center rounded-full bg-gradient-to-br from-accent to-accent2 font-display text-3xl font-bold text-on-accent shadow-2xl">AS</div>
     </div>
   );
 }
