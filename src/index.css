@@ -1,0 +1,31 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+:root { --bg:#f6f4ff; --surface:#ffffff; --ink:#14102b; --muted:#5d5878; --line:#dcd6f2; --accent:#5b3df5; --accent2:#e0267a; --on-accent:#ffffff; }
+.dark { --bg:#0b0a1a; --surface:#15132b; --ink:#f1eeff; --muted:#a29ec4; --line:#2a2650; --accent:#8b6cff; --accent2:#ff5fa2; --on-accent:#0b0a1a; }
+@theme inline {
+  --color-bg: var(--bg); --color-surface: var(--surface); --color-ink: var(--ink); --color-muted: var(--muted);
+  --color-line: var(--line); --color-accent: var(--accent); --color-accent2: var(--accent2); --color-on-accent: var(--on-accent);
+  --font-display: "Fraunces", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+}
+html { overflow-x: clip; scroll-behavior: smooth; scroll-padding-top: 5rem; }
+body { background: var(--bg); color: var(--ink); font-family: var(--font-sans); overflow-x: hidden; transition: background-color .3s, color .3s; }
+:focus-visible { outline: 2px solid var(--accent2); outline-offset: 3px; border-radius: 6px; }
+@media (pointer: fine) { html.cc, html.cc a, html.cc button, html.cc input, html.cc textarea { cursor: none; } }
+.grad { background: linear-gradient(90deg, var(--accent), var(--accent2), var(--accent)); background-size: 200% auto; -webkit-background-clip: text; background-clip: text; color: transparent; animation: shine 5s linear infinite; }
+.stroke { -webkit-text-stroke: 1.5px var(--ink); color: transparent; }
+.blob { position: absolute; border-radius: 9999px; opacity: .35; will-change: transform; }
+@media (min-width: 768px) { .blob { animation: drift 18s ease-in-out infinite alternate; } }
+@media (max-width: 767px) { .grad, .orbit, .unspin { animation: none; } }
+.marq { will-change: transform; animation: marq 45s linear infinite; }
+.marq.rev { animation-direction: reverse; }
+.marq:hover { animation-play-state: paused; }
+.spot { position: relative; overflow: hidden; transition: border-color .3s; }
+.spot::before { content: ""; position: absolute; inset: 0; pointer-events: none; opacity: 0; transition: opacity .3s; background: radial-gradient(320px circle at var(--mx, 50%) var(--my, 50%), color-mix(in srgb, var(--accent) 28%, transparent), transparent 70%); }
+@media (hover: hover) { .spot:hover { border-color: var(--accent); } .spot:hover::before { opacity: 1; } }
+.orbit, .unspin { animation: orb linear infinite; }
+@keyframes orb { to { transform: rotate(360deg); } }
+@keyframes shine { to { background-position: 200% center; } }
+@keyframes drift { to { transform: translate(80px, 60px) scale(1.15); } }
+@keyframes marq { to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .grad, .blob, .marq, .orbit, .unspin { animation: none; } }
