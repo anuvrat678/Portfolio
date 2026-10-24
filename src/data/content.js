@@ -5,6 +5,7 @@ export const L = {
   turfRepo: "https://github.com/anuvrat678/TurfBook",
   turfLive: "https://turf-book-inky.vercel.app/",
   farmRepo: "https://github.com/anuvrat678/Farm-Dashboard-using-Mern",
+  farmlive: "https://farmdashboard-sigma.vercel.app/",
 };
 export const NAV = ["Home", "About", "Skills", "Education", "Projects", "Contact"];
 export const SKILLS = {
@@ -25,7 +26,7 @@ export const PROJECTS = [
     name: "Farm Management Dashboard", kind: "MERN stack dashboard",
     text: "A farm management dashboard built with the MERN stack for organising farm product data. Source code is available on GitHub.",
     tech: ["MongoDB", "Express.js", "React.js", "Node.js"],
-    repo: L.farmRepo,
+    live: L.farmlive, repo: L.farmRepo,
   },
 ];
 export const RESUME = "/Anuvrat_Rajpurohit_Resume.pdf";
