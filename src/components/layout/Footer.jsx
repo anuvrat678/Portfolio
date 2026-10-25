@@ -17,7 +17,7 @@ export function Footer() {
         <div className="mt-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr]">
           <div>
             <div className="flex items-center gap-3">
-              <span className="grid size-11 place-items-center rounded-full bg-gradient-to-br from-accent to-accent2 font-display font-bold text-on-accent">AR</span>
+              <span className="grid size-11 place-items-center rounded-full bg-gradient-to-br from-accent to-accent2 font-display font-bold text-on-accent">AS</span>
               <div><p className="font-display text-lg font-bold">Anuvrat Singh Rajpurohit</p><p className="text-sm text-muted">MCA Student | Aspiring Full-Stack Developer</p></div>
             </div>
             <div className="mt-6 flex gap-3">
